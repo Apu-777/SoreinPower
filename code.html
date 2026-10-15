@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html class="light" lang="en" style="">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main> :first-child {
+        margin-top: 0 !important;
+      }
+
+      main> :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script
+    id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"primary": "#008378", "primary-container": "#008378", "secondary": "#0284c7", "secondary-container": "#38bdf8", "surface": "#ffffff", "surface-container": "#f8fafc", "surface-container-low": "#f1f5f9", "surface-container-high": "#e2e8f0", "surface-container-lowest": "#ffffff", "surface-card": "#ffffff", "surface-elevated": "#f8fafc", "text-primary": "#0f172a", "text-muted": "#64748b", "on-surface": "#0f172a", "on-surface-variant": "#475569", "power-crimson": "#e11d48", "power-amber": "#d97706"}, "borderRadius": {"DEFAULT": "0.375rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"}, "spacing": {"space-2xl": "4rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "space-md": "1rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "margin": "2rem", "space-sm": "0.5rem"}, "fontFamily": {"body-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-sm": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "label-numeric-lg": ["Space Grotesk"], "display-hero-mobile": ["Space Grotesk"], "title-md": ["Plus Jakarta Sans"], "headline-lg": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "body-lg": ["Plus Jakarta Sans"], "label-badge": ["Space Grotesk"], "display-hero": ["Space Grotesk"], "label-caption": ["Plus Jakarta Sans"]}, "fontSize": {"body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}], "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "label-numeric-lg": ["28px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "display-hero-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "title-md": ["18px", {"lineHeight": "26px", "fontWeight": "600"}], "headline-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "headline-lg-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}], "label-badge": ["11px", {"lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700"}], "display-hero": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700"}], "label-caption": ["11px", {"lineHeight": "16px", "fontWeight": "500"}]}}}};</script>
+</head>
+
+<body class="bg-[#ffffff] font-body-md text-text-primary antialiased">
+  <header class="fixed top-0 left-0 right-0 z-50 w-full bg-white/95 backdrop-blur-xl shadow-sm">
+    <div class="w-full bg-slate-50 px-gutter py-space-xs">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between font-label-badge text-label-badge text-slate-500 tracking-wider uppercase">
+        <div class="flex items-center gap-space-sm"><span
+            class="inline-block w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)] animate-pulse"></span><span
+            class="">Free shipping on orders over $500 | Expandable Modular Energy Ecosystem</span></div>
+        <div class="flex items-center gap-space-lg">
+          <div class="flex items-center gap-space-xs text-slate-700"><span
+              class="material-symbols-outlined text-[14px] text-teal-600">bolt</span><span
+              class="font-label-caption text-label-caption text-slate-500">GRID STATUS: <span
+                class="text-teal-700 font-bold">ONLINE 99.98%</span></span></div>
+          <div class="flex items-center gap-space-xs cursor-pointer hover:text-teal-600 transition-colors"><span
+              class="material-symbols-outlined text-[14px]">public</span><span class="">GLOBAL / USD ($)</span><span
+              class="material-symbols-outlined text-[12px]">expand_more</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="h-20 max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-lg">
+      <div class="flex items-center gap-space-xl"><a class="flex items-center gap-space-sm group" data-path="home"
+          href="#">
+          <div class="relative flex items-center justify-center w-10 h-10 rounded-xl bg-teal-50 text-teal-600"><span
+              class="material-symbols-outlined text-teal-600 text-[24px]">electric_bolt</span></div>
+          <div class="flex flex-col"><span
+              class="font-headline-sm text-headline-sm tracking-tight text-slate-900 uppercase group-hover:text-teal-600 transition-colors">Sorein<span
+                class="text-teal-600">Power</span></span><span
+              class="font-label-badge text-[9px] uppercase tracking-[0.2em] text-slate-400 -mt-1">Modular
+              Reserves</span></div>
+        </a>
+        <nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-teal-600 font-semibold"><a
+            aria-current="page" class="transition-colors py-space-xs text-teal-600 font-semibold" data-path="home"
+            href="#">Home</a><a
+            class="font-body-md text-body-md text-slate-600 hover:text-teal-600 transition-colors py-space-xs"
+            data-path="products-shop" href="#">Products / Shop</a><a
+            class="font-body-md text-body-md text-slate-600 hover:text-teal-600 transition-colors py-space-xs"
+            data-path="modular-ecosystem" href="#">Modular Ecosystem</a><a
+            class="font-body-md text-body-md text-slate-600 hover:text-teal-600 transition-colors py-space-xs"
+            data-path="solar-panels" href="#">Solar Panels</a><a
+            class="font-body-md text-body-md text-slate-600 hover:text-teal-600 transition-colors py-space-xs"
+            data-path="support" href="#">Support</a><a
+            class="font-body-md text-body-md text-slate-600 hover:text-teal-600 transition-colors py-space-xs"
+            data-path="explore" href="#">Explore</a><a
+            class="font-body-md text-body-md text-slate-600 hover:text-teal-600 transition-colors py-space-xs"
+            data-path="contact" href="#">Contact</a></nav>
+      </div>
+      <div class="flex items-center gap-space-md">
+        <div
+          class="relative hidden md:flex items-center w-56 lg:w-64 bg-slate-100 rounded-xl px-space-sm py-1.5 focus-within:ring-2 focus-within:ring-teal-600/20 focus-within:bg-white transition-all">
+          <span class="material-symbols-outlined text-slate-400 text-[18px] mr-space-xs">search</span><input
+            class="w-full bg-transparent font-body-sm text-body-sm text-slate-800 placeholder:text-slate-400 focus:outline-none"
+            placeholder="Search battery units, solar..." type="text">
+        </div><a
+          class="relative flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-slate-700 hover:bg-teal-50 hover:text-teal-700 transition-all"
+          data-path="cart" href="#"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span
+            class="absolute -top-1 -right-1 flex items-center justify-center w-5 h-5 rounded-full bg-teal-600 text-white font-headline-sm text-[10px] font-bold shadow-sm">2</span></a><a
+          class="flex items-center gap-space-xs pl-space-xs hover:opacity-90 transition-opacity" data-path="account"
+          href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-slate-100"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1XvG0k4Unbda0bqJ12UNaq6Kks13uQvCAEVaHMSAvhbkaO6TnMfD82QU3N3F6wU3opctDLXJxlc9QfFEsLER1cpVRxcO-hemvdGz5GD9KhND6rGR0Ouzm3SWoDp6K7M7wxbW28Onz2roWtZLsGStN2C2aADdNrhPjniiF7O-6mckc0PU9PtMTkiH6hHaKrchj9xFzO8igyfXCWP2lzvlw5v1ZO6WnmceQG5cwhwZg5fSKrYtTnKD9X5FQ"></a>
+      </div>
+    </div>
+  </header>
+  <main class="w-full pt-28 bg-[#ffffff] min-h-screen">
+    <div class="flex flex-col w-full overflow-hidden">
+      <!-- HERO SECTION -->
+      <section class="relative w-full pt-8 pb-20 px-gutter max-w-7xl mx-auto">
+        <!-- Ambient Soft Lighting Glow -->
+        <div
+          class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[360px] bg-teal-50/70 blur-[130px] rounded-full pointer-events-none -z-10">
+        </div>
+        <div
+          class="absolute top-1/3 right-10 w-[300px] h-[260px] bg-sky-50/60 blur-[100px] rounded-full pointer-events-none -z-10">
+        </div>
+        <div class="grid grid-cols-12 gap-gutter items-center">
+          <!-- Left Column: Typography & CTAs -->
+          <div class="col-span-12 lg:col-span-6 flex flex-col items-start z-10">
+            <!-- Badges Stack -->
+            <div class="flex flex-wrap items-center gap-space-sm mb-space-md">
+              <div
+                class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-teal-50 text-teal-700 shadow-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-600 animate-pulse"></span>
+                <span class="font-label-badge text-label-badge text-teal-700 tracking-widest uppercase">GENERATION III
+                  LFP</span>
+              </div>
+              <div
+                class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-slate-100 text-slate-600 shadow-sm">
+                <span class="material-symbols-outlined text-[13px] text-teal-600">layers</span>
+                <span class="font-label-badge text-label-badge tracking-wider uppercase text-slate-600">Ultra-Density
+                  Stackable Architecture</span>
+              </div>
+            </div>
+            <!-- Main Headline with Industrial Precision -->
+            <h1
+              class="font-headline-lg text-display-hero text-slate-900 tracking-tighter uppercase font-bold leading-none mb-space-md">
+              Modular Power <br>
+              <span class="bg-gradient-to-r from-teal-600 to-sky-600 bg-clip-text text-transparent">Station</span>
+            </h1>
+            <!-- Subtitle -->
+            <p class="font-body-lg text-body-lg text-slate-600 max-w-lg mb-space-xl leading-relaxed">
+              Expandable Energy Storage for Home, RV &amp; Off-Grid resilience. Tailored to match your exact power
+              demands, no more, no less.
+            </p>
+            <!-- CTAs -->
+            <div class="flex flex-wrap items-center gap-space-md w-full sm:w-auto">
+              <a class="inline-flex items-center justify-center gap-space-sm px-7 py-3.5 rounded-xl bg-teal-600 text-white font-headline-sm text-[14px] uppercase font-bold tracking-wider hover:bg-teal-700 shadow-md shadow-teal-600/20 transition-all group"
+                href="#store-deployment">
+                <span class="">SHOP NOW</span>
+                <span
+                  class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+              <a class="inline-flex items-center justify-center gap-space-xs px-6 py-3.5 rounded-xl bg-white text-slate-800 font-headline-sm text-[14px] uppercase font-semibold tracking-wider hover:bg-slate-50 hover:text-teal-600 shadow-md shadow-slate-200/50 transition-all"
+                href="#ecosystem-breakdown">
+                <span class="material-symbols-outlined text-[18px]">hub</span>
+                <span class="">CONFIGURE ECOSYSTEM</span>
+              </a>
+            </div>
+            <!-- Metric Telemetry Micro-Bar -->
+            <div
+              class="grid grid-cols-3 gap-space-lg pt-space-xl mt-space-lg border-t border-slate-100 w-full max-w-lg">
+              <div>
+                <div class="font-headline-md text-label-numeric-lg text-teal-600 font-bold">55.2<span
+                    class="text-xs font-normal text-slate-500 ml-0.5">kWh</span></div>
+                <div class="font-label-caption text-label-caption text-slate-500 uppercase tracking-wider">Modular Max
+                  Cap</div>
+              </div>
+              <div>
+                <div class="font-headline-md text-label-numeric-lg text-slate-900 font-bold">18<span
+                    class="text-xs font-normal text-slate-500 ml-0.5">kW</span></div>
+                <div class="font-label-caption text-label-caption text-slate-500 uppercase tracking-wider">Peak Surge
+                  Wave</div>
+              </div>
+              <div>
+                <div class="font-headline-md text-label-numeric-lg text-emerald-600 font-bold">50<span
+                    class="text-xs font-normal text-slate-500 ml-0.5">MIN</span></div>
+                <div class="font-label-caption text-label-caption text-slate-500 uppercase tracking-wider">0-80% Fast
+                  Grid</div>
+              </div>
+            </div>
+          </div>
+          <!-- Right Column: Interactive Hardware Staging -->
+          <div class="col-span-12 lg:col-span-6 relative mt-space-xl lg:mt-0">
+            <!-- Floating Spec Badges Orbiting the Staging Deck -->
+            <div
+              class="absolute -top-4 right-6 z-20 hidden sm:flex items-center gap-space-xs px-3.5 py-1.5 rounded-xl bg-white/95 backdrop-blur-md shadow-md text-slate-800">
+              <span class="material-symbols-outlined text-teal-600 text-[16px]">electric_bolt</span>
+              <span class="font-headline-sm text-body-sm font-semibold text-slate-800">0-80% in 50m Dual-Charge</span>
+            </div>
+            <div
+              class="absolute bottom-6 -left-4 z-20 hidden sm:flex items-center gap-space-xs px-3.5 py-1.5 rounded-xl bg-white/95 backdrop-blur-md shadow-md text-slate-800">
+              <span class="material-symbols-outlined text-emerald-600 text-[16px]">lock</span>
+              <span class="font-headline-sm text-body-sm font-semibold text-slate-800">Plug-and-Play Quicklock</span>
+            </div>
+            <!-- Hero Product Stage Box -->
+            <div class="relative w-full aspect-[4/3] rounded-2xl bg-slate-900 p-3 overflow-hidden shadow-2xl group">
+              <!-- Staged Hardware Render -->
+              <img class="w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-105"
+                data-alt="Futuristic studio product rendering of the SoreinPower Generation 3 modular power station stack, featuring matte obsidian carbon chassis, bioluminescent cyan battery level gauge bar, robust military latches, and integrated solar inverter faceplate, illuminated with neon cyan and deep graphite rim lighting against a high tech dark slate background."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXIOQe2KhJc3qUO_0-OLqClhjG5QXEHerqZRcMQrsnrsfoxkmqxwmyZl-HRxM8Ck0EjH3rHajqKV3MZ3-IMyCBmJYyOxxJoe2AE4zYuplR3kaZLKQyzWpp2XBVWM-Q-Ztyi5pt0qj496DbAQZxmy7k4YDWIWy8W_00xfrjW--AJpsBttrIzQ8K3al76zmG0MtM8LM_zjiIRG50Yxk-T0pMJ5Y7E8SXU23zZwDWOQuIl5ShXJazkIQm">
+              <!-- Live Diagnostic Readout Tag -->
+              <div
+                class="absolute bottom-4 right-4 bg-slate-950/80 backdrop-blur-md px-3 py-1.5 rounded-lg flex items-center gap-space-sm text-white">
+                <span class="inline-block w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+                <div class="font-label-badge text-[10px] text-slate-300 tracking-widest font-mono">LINK STACK: 4 NODES
+                  ONLINE</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- VALUE PROPOSITION STRIP -->
+      <section class="w-full bg-[#f8fafc] py-space-xl px-gutter">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-space-xl">
+          <div class="max-w-xl">
+            <div
+              class="flex items-center gap-space-xs text-teal-600 mb-space-xs font-label-badge text-label-badge uppercase tracking-widest font-bold">
+              <span class="material-symbols-outlined text-[14px]">tune</span>
+              Modular Reserve Architecture
+            </div>
+            <h2 class="font-headline-md text-headline-md text-slate-900 font-bold">
+              Tailored to match your exact power demands, no more, no less.
+            </h2>
+            <p class="font-body-md text-body-md text-slate-600 mt-space-xs">
+              Stack hot-swappable battery blocks up to 55.2kWh without rewiring your base station. Seamless modular
+              upgrade paths built for zero downtime.
+            </p>
+          </div>
+          <!-- Feature Pill Badges -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md w-full lg:w-auto">
+            <div
+              class="flex items-center gap-space-sm p-4 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow">
+              <div class="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center text-teal-600">
+                <span class="material-symbols-outlined text-[20px]">bolt</span>
+              </div>
+              <div>
+                <div class="font-headline-sm text-body-md font-bold text-slate-900">Fast Dual Charging</div>
+                <div class="font-label-caption text-label-caption text-slate-500">AC + Solar simultaneous</div>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-space-sm p-4 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow">
+              <div class="w-10 h-10 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600">
+                <span class="material-symbols-outlined text-[20px]">router</span>
+              </div>
+              <div>
+                <div class="font-headline-sm text-body-md font-bold text-slate-900">Smart Gateway</div>
+                <div class="font-label-caption text-label-caption text-slate-500">Real-time sub-second IoT</div>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-space-sm p-4 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow">
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600">
+                <span class="material-symbols-outlined text-[20px]">shield</span>
+              </div>
+              <div>
+                <div class="font-headline-sm text-body-md font-bold text-slate-900">IP65 Ruggedization</div>
+                <div class="font-label-caption text-label-caption text-slate-500">Extreme environment sealed</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 20-PRODUCT SHOWCASE MATRIX (EXACT 4 COLUMNS X 5 ROWS) -->
+      <section class="w-full py-space-2xl px-gutter max-w-7xl mx-auto" id="store-deployment">
+        <!-- Showcase Matrix Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-lg mb-space-xl">
+          <div>
+            <div class="flex items-center gap-space-sm mb-space-xs">
+              <span class="w-2 h-2 bg-teal-600 rounded-sm"></span>
+              <span class="font-label-badge text-label-badge uppercase tracking-[0.2em] text-teal-600">Store
+                Deployment</span>
+              <span
+                class="px-2.5 py-0.5 rounded-full bg-slate-100 font-label-badge text-[10px] text-slate-700 font-mono font-bold">16
+                UNITS AVAILABLE</span>
+            </div>
+            <h2 class="font-headline-lg text-headline-lg font-bold text-slate-900 uppercase tracking-tight">
+              Featured Power Solutions
+            </h2>
+          </div>
+          <!-- Filter Tabs Navigation -->
+          <div class="flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-slate-100">
+            <button
+              class="px-3.5 py-1.5 rounded-xl bg-teal-600 text-white font-label-badge text-label-badge uppercase font-bold shadow-sm">
+              ALL UNITS (16)
+            </button>
+            <button
+              class="px-3.5 py-1.5 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-white font-label-badge text-label-badge uppercase transition-colors">
+              POWER STATIONS
+            </button>
+            <button
+              class="px-3.5 py-1.5 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-white font-label-badge text-label-badge uppercase transition-colors">
+              BATTERIES &amp; INVERTERS
+            </button>
+            <button
+              class="px-3.5 py-1.5 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-white font-label-badge text-label-badge uppercase transition-colors">
+              SOLAR ARRAYS
+            </button>
+            <button
+              class="px-3.5 py-1.5 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-white font-label-badge text-label-badge uppercase transition-colors">
+              ACCESSORIES
+            </button>
+          </div>
+        </div>
+        <!-- The 4 Columns x 5 Rows Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- ================= ROW 1 ================= -->
+          <!-- 1. Main Base Station -->
+          <div
+            class="group flex flex-col rounded-2xl bg-white shadow-sm hover:shadow-xl p-4 transition-all duration-300">
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-100 mb-4">
+              <span
+                class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-600 font-label-badge text-[10px] font-bold shadow-sm">SAVE
+                $249</span>
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="High tech dark studio shot of the SoreinPower Main Base Station unit with matte black chassis, high amperage AC output sockets, and glowing neon cyan telemetry readout display screen."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkHLj8FEl_vToCThWKrbrMizkRh1ux-RO8748Puxycr9lUXMQE5lxRbCFpf57v8nIWI5ZOUiJJht6G_flEm5GjomxFOflmJ2Gctu_JkDz8HenSlsoEtQAtIDKflScVi4OBk6A-Y0p5MVqrWgcrqpCXxQJuS61gEPjyMQCEWLVYxs_jBfqUvzwGjtxeRk13xFs7IoAarRaVE1aDLnNagqnKAbYZbrizMWUvPyZkFCluD5tADEMJ1h1z">
+            </div>
+            <div
+              class="flex items-center justify-between text-slate-500 font-label-caption text-[11px] uppercase tracking-wider mb-1">
+              <span class="">BASE MODULE</span>
+              <span class="text-emerald-600 flex items-center gap-1 font-semibold"><span
+                  class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>In Stock</span>
+            </div>
+            <h3
+              class="font-headline-sm text-[16px] text-slate-900 font-bold group-hover:text-teal-600 transition-colors line-clamp-1">
+              Main Base Station</h3>
+            <p class="font-body-sm text-body-sm text-slate-500 mb-3">2200W Output | LFP Long Life</p>
+            <div class="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+
+              <a href="#"
+                class="inline-flex items-center justify-center px-3 py-2 rounded-xl bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-700 font-label-badge text-[11px] uppercase tracking-wider font-semibold transition-all">Read
+                more</a><button
+                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-teal-600 text-slate-700 hover:text-white flex items-center justify-center transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+          <!-- 2. Extra Battery 2160Wh -->
+          <div
+            class="group flex flex-col rounded-2xl bg-white shadow-sm hover:shadow-xl p-4 transition-all duration-300">
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-100 mb-4">
+              <span
+                class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-600 font-label-badge text-[10px] font-bold shadow-sm">SAVE
+                $189</span>
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Futuristic stackable expansion battery pack with heavy duty side latches, brushed gunmetal top plate and cyan indicator lights isolated in dramatic dark studio setting."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa4FDTnB4e-gKe0nxDf319Jo0_N4KtjiEDZHSu2ud6tjgLjq8XKtof4h-2YQTzLa0k3HALO2rksK7RaXmC1PTNYRy44eeQRtcVDdTlAAbeM6fU87FC-pe_k7T4_27MBEOaN0owmCwJ_ISKExMlQm5UK4jMIe9YgDehO13JMeD7bcGPm2y5cVDnokFL_e5XoLGHXnG2ShPyz0wiebWtt5Xq39M44T7gJ1LXrqUVMMvjWk6i0Nh6e4pA">
+            </div>
+            <div
+              class="flex items-center justify-between text-slate-500 font-label-caption text-[11px] uppercase tracking-wider mb-1">
+              <span class="">EXPANSION PACK</span>
+              <span class="text-emerald-600 flex items-center gap-1 font-semibold"><span
+                  class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>In Stock</span>
+            </div>
+            <h3
+              class="font-headline-sm text-[16px] text-slate-900 font-bold group-hover:text-teal-600 transition-colors line-clamp-1">
+              Extra Battery 2160Wh</h3>
+            <p class="font-body-sm text-body-sm text-slate-500 mb-3">2160Wh LFP Heavy Duty Cell</p>
+            <div class="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+
+              <a href="#"
+                class="inline-flex items-center justify-center px-3 py-2 rounded-xl bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-700 font-label-badge text-[11px] uppercase tracking-wider font-semibold transition-all">Read
+                more</a><button
+                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-teal-600 text-slate-700 hover:text-white flex items-center justify-center transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+          <!-- 3. Inverter 2200W Bi-Directional -->
+          <div
+            class="group flex flex-col rounded-2xl bg-white shadow-sm hover:shadow-xl p-4 transition-all duration-300">
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-100 mb-4">
+              <span
+                class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-600 font-label-badge text-[10px] font-bold shadow-sm">SAVE
+                $85</span>
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Compact bi-directional pure sine wave inverter component with heavy cooling fins and digital watt output indicators on dark tech backdrop."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXsOlKqTFncJQ6phAJjjnPmKWn-3NRk6ZNRIKyAQaa6MAE7L9IzTXXoZ9xzDS3FjE86eGh40Qc7WLX-dMkJ_mI1Wcfd2TUD_UiJ94YDm0mBszjVuK7zstNABZTJJQ0jdA6I02IWFOKEjMLEsGsWuQbEhg4H3iRP0NUJ1Mr4kddSfyjCwBaih8ggiqua6yoktPfNzNUY8m24Hh2X7jyAItlty2mZvo5pZu0pg9NYzA5MWdih70r7ig3">
+            </div>
+            <div
+              class="flex items-center justify-between text-slate-500 font-label-caption text-[11px] uppercase tracking-wider mb-1">
+              <span class="">INVERTER UNIT</span>
+              <span class="text-emerald-600 flex items-center gap-1 font-semibold"><span
+                  class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>In Stock</span>
+            </div>
+            <h3
+              class="font-headline-sm text-[16px] text-slate-900 font-bold group-hover:text-teal-600 transition-colors line-clamp-1">
+              Inverter 2200W Bi-Directional</h3>
+            <p class="font-body-sm text-body-sm text-slate-500 mb-3">0-80% in 50m Quick Charge</p>
+            <div class="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+
+              <a href="#"
+                class="inline-flex items-center justify-center px-3 py-2 rounded-xl bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-700 font-label-badge text-[11px] uppercase tracking-wider font-semibold transition-all">Read
+                more</a><button
+                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-teal-600 text-slate-700 hover:text-white flex items-center justify-center transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+          <!-- 4. Mobile Chassis Off-Road -->
+          <div
+            class="group flex flex-col rounded-2xl bg-white shadow-sm hover:shadow-xl p-4 transition-all duration-300">
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-100 mb-4">
+              <span
+                class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-600 font-label-badge text-[10px] font-bold shadow-sm">SAVE
+                $94</span>
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Rugged all-terrain mobile wheeled chassis with telescopic handle designed for modular battery stacks, aluminum reinforcement bars in dark studio lighting."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQkwPJPoB2OlLnDm0tUg5paDX526FZvIBPPUWTZM9a4DDDVG1aiosMsTrNilZAr3xSlkU6t7g72FxodnjanOcP-6ymFQsWIjhDwGH4XlzxW0xPN2FGh78tuDEcRVch0y8gY4Y6bNcIeIMIqD0hNf7_oIWSVaXXEYfSw2YEa6Ooj9K5d12xzBjWss08GZleBa8K9p8x8WbchXTYCJEJQ2USKTCpQGEAFdvBVVkFbaRlh6WY9okY5n3H">
+            </div>
+            <div
+              class="flex items-center justify-between text-slate-500 font-label-caption text-[11px] uppercase tracking-wider mb-1">
+              <span class="">MOBILITY GEAR</span>
+              <span class="text-emerald-600 flex items-center gap-1 font-semibold"><span
+                  class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>In Stock</span>
+            </div>
+            <h3
+              class="font-headline-sm text-[16px] text-slate-900 font-bold group-hover:text-teal-600 transition-colors line-clamp-1">
+              Mobile Chassis Off-Road</h3>
+            <p class="font-body-sm text-body-sm text-slate-500 mb-3">All-Terrain Wheels &amp; Telescopic Arm</p>
+            <div class="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+
+              <a href="#"
+                class="inline-flex items-center justify-center px-3 py-2 rounded-xl bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-700 font-label-badge text-[11px] uppercase tracking-wider font-semibold transition-all">Read
+                more</a><button
+                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-teal-600 text-slate-700 hover:text-white flex items-center justify-center transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+          <!-- ================= ROW 2 ================= -->
+          <!-- 5. 400W Solar Panel -->
+          <div
+            class="group flex flex-col rounded-2xl bg-white shadow-sm hover:shadow-xl p-4 transition-all duration-300">
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-100 mb-4">
+              <span
+                class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-600 font-label-badge text-[10px] font-bold shadow-sm">SAVE
+                $200</span>
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Monocrystalline 400W foldable solar panel array unfolded with dark obsidian cells, integrated kickstand, and reinforced ETFE coating in high tech outdoor setup."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlEKXffk3mfly8CrJL9dRBpfahVBVp-szOH-feqJw8QrghlPCxBV7bXseqVtPVqmcONexM4tcLthOELevcvSL28HgUnftAYFcLefBIQSX8TZpTQajGSj1vh4zUELv8PAG20oP3ewAV0Afe-vjUw10ZBI6biE0pwyRcuKcFC_8TIjNi9mF9VoJFOXHHMQooMclzqSbDXrlFy_TDrfyo4cPh0TbdJElnKL4FVT-qo7-Pk-2hYfC9mMNm">
+            </div>
+            <div
+              class="flex items-center justify-between text-slate-500 font-label-caption text-[11px] uppercase tracking-wider mb-1">
+              <span class="">SOLAR ARRAY</span>
+              <span class="text-emerald-600 flex items-center gap-1 font-semibold"><span
+                  class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>In Stock</span>
+            </div>
+            <h3
+              class="font-headline-sm text-[16px] text-slate-900 font-bold group-hover:text-teal-600 transition-colors line-clamp-1">
+              400W Solar Panel</h3>
+            <p class="font-body-sm text-body-sm text-slate-500 mb-3">23.4% Efficiency Monocrystalline</p>
+            <div class="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+
+              <a href="#"
+                class="inline-flex items-center justify-center px-3 py-2 rounded-xl bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-700 font-label-badge text-[11px] uppercase tracking-wider font-semibold transition-all">Read
+                more</a><button
+                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-teal-600 text-slate-700 hover:text-white flex items-center justify-center transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+          <!-- 6. 200W Solar Panel -->
+          <div
+            class="group flex flex-col rounded-2xl bg-white shadow-sm hover:shadow-xl p-4 transition-all duration-300">
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-100 mb-4">
+              <span
+                class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-600 font-label-badge text-[10px] font-bold shadow-sm">SAVE
+                $200</span>
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Portable quad-folding 200W solar panel with magnetic carrying handles and high efficiency solar cells, studio product lighting on dark reflective surface."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt91QYmrc66vzE3SZ45NN2Y0-G7OXb2dhR0S2c4X82Xpf9vXBjmzrQQvCHneq_lyD0VbfD4L3v1TKnuoWlCejUftZRvt2eNp-bpqLek_Z5QLktKeAq4aJs3PWlI8xlwn86lDWXcivfkMKCS3fJDgEnMb2Ql2jDX3KZIeAhxFhfImr9j6VWQdR7xHDFZbJ7LKuwjTXUfuHAQOz1jiPtFUifqARlv1jBKaVCBs4z7F6LrM0hcAo1PJNV">
+            </div>
+            <div
+              class="flex items-center justify-between text-slate-500 font-label-caption text-[11px] uppercase tracking-wider mb-1">
+              <span class="">PORTABLE SOLAR</span>
+              <span class="text-emerald-600 flex items-center gap-1 font-semibold"><span
+                  class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>In Stock</span>
+            </div>
+            <h3
+              class="font-headline-sm text-[16px] text-slate-900 font-bold group-hover:text-teal-600 transition-colors line-clamp-1">
+              200W Solar Panel</h3>
+            <p class="font-body-sm text-body-sm text-slate-500 mb-3">Compact ETFE Foldable Array</p>
+            <div class="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+
+              <a href="#"
+                class="inline-flex items-center justify-center px-3 py-2 rounded-xl bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-700 font-label-badge text-[11px] uppercase tracking-wider font-semibold transition-all">Read
+                more</a><button
+                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-teal-600 text-slate-700 hover:text-white flex items-center justify-center transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+          <!-- 7. Sorein P600 LFP -->
+          <div
+            class="group flex flex-col rounded-2xl bg-white shadow-sm hover:shadow-xl p-4 transition-all duration-300">
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-100 mb-4">
+              <span
+                class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-600 font-label-badge text-[10px] font-bold shadow-sm">SAVE
+                $600</span>
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Ultra-compact tactical outdoor power station with built-in camping lantern bar, wireless charging top pad, and high clarity OLED screen in obsidian black."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCghCYm-Xn-k_V_CZmo73OKhBJ8D1Ji66JWcJrak_kwLsBfBx9JMRb8EhpjNJa_Cr64KEpyq9pVUv8Pj5JU6yU1iTrFsj6N5u3BKHfcDhT6ow5udkNvdXq1NyeYn2-Mq6CjR2tzBWypzWG17f6__dxmWeX-jkQJRh1_59NGdJirLiCITi4x1FdylMgwV-EMZoNQrBopRsccbgA8GIk4g5aB96oOi1gDVmv3btrp4BKNjS9I9h01OyRu">
+            </div>
+            <div
+              class="flex items-center justify-between text-slate-500 font-label-caption text-[11px] uppercase tracking-wider mb-1">
+              <span class="">P-SERIES COMPACT</span>
+              <span class="text-emerald-600 flex items-center gap-1 font-semibold"><span
+                  class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>In Stock</span>
+            </div>
+            <h3
+              class="font-headline-sm text-[16px] text-slate-900 font-bold group-hover:text-teal-600 transition-colors line-clamp-1">
+              Sorein P600 LFP</h3>
+            <p class="font-body-sm text-body-sm text-slate-500 mb-3">600W Pure Sine / 481Wh LiFePO4</p>
+            <div class="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+
+              <a href="#"
+                class="inline-flex items-center justify-center px-3 py-2 rounded-xl bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-700 font-label-badge text-[11px] uppercase tracking-wider font-semibold transition-all">Read
+                more</a><button
+                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-teal-600 text-slate-700 hover:text-white flex items-center justify-center transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+          <!-- 8. Sorein A2 Power Station -->
+          <div
+            class="group flex flex-col rounded-2xl bg-white shadow-sm hover:shadow-xl p-4 transition-all duration-300">
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-100 mb-4">
+              <span
+                class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-600 font-label-badge text-[10px] font-bold shadow-sm">SAVE
+                $464</span>
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Heavy capacity dual handle power generator station unit with illuminated multi-port panel, USB-C 100W PD hubs, and cyan LED accent lights."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTyoYgUHK9I7BwBHhaND3RNKCb250sSc5ATdEu6rdJiTgvUYkdWlBrRHq6fqPyKI3VhHmIE1tw7s5bnbG_EQBWv1AswmDsoozH8Wv0BplFNS8iENpuBllEQFwOqfe85VhtHTO1tSEBpe4KGtj-dCJVvvy4upFGeZ8zbLTpuYK0lNDCEyIDc_jjsucwQXR-54etMymDkg0KU1Dgnnk_BfVQHE7a1NQNd1J472zBUFmJI4rw8cBQ1HUB">
+            </div>
+            <div
+              class="flex items-center justify-between text-slate-500 font-label-caption text-[11px] uppercase tracking-wider mb-1">
+              <span class="">A-SERIES PRO</span>
+              <span class="text-emerald-600 flex items-center gap-1 font-semibold"><span
+                  class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>In Stock</span>
+            </div>
+            <h3
+              class="font-headline-sm text-[16px] text-slate-900 font-bold group-hover:text-teal-600 transition-colors line-clamp-1">
+              Sorein A2 Power Station</h3>
+            <p class="font-body-sm text-body-sm text-slate-500 mb-3">2074Wh Capacity / 2200W Output</p>
+            <div class="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+
+              <a href="#"
+                class="inline-flex items-center justify-center px-3 py-2 rounded-xl bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-700 font-label-badge text-[11px] uppercase tracking-wider font-semibold transition-all">Read
+                more</a><button
+                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-teal-600 text-slate-700 hover:text-white flex items-center justify-center transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+          <!-- ================= ROW 3 ================= -->
+          <!-- 9. Sorein A3 Station -->
+          <div
+            class="group flex flex-col rounded-2xl bg-white shadow-sm hover:shadow-xl p-4 transition-all duration-300">
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-100 mb-4">
+              <span
+                class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-600 font-label-badge text-[10px] font-bold shadow-sm">SAVE
+                $560</span>
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Monolithic 3kWh high capacity modular master power station with stacked expansion slot interface, cybernetic ventilation grille, and vivid cyan telemetry bar."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnuzO2tSta1-G7iaHcKYzlHLl6oL0mDRtmgavOrrRCte0z1LY8qEs_4aUIgsyRzWOBM-EW9vlMf9rzoyiraYzz3_9miYVtznkQ5-YrhpTTYX7Z_imM7wJelzhe7KlxtjFTUYei_MO4Pb3_XhnaAV5pfGgTvkkwTaEI15CAoQJHMiSFLE8U1RptkWN3kn08N7YKD2BDEAddz0V2SF-4CrIx19gsUK-AYVMmQw7gFBk6y25--zG-fbQL">
+            </div>
+            <div
+              class="flex items-center justify-between text-slate-500 font-label-caption text-[11px] uppercase tracking-wider mb-1">
+              <span class="">A-SERIES FLAGSHIP</span>
+              <span class="text-emerald-600 flex items-center gap-1 font-semibold"><span
+                  class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>In Stock</span>
+            </div>
+            <h3
+              class="font-headline-sm text-[16px] text-slate-900 font-bold group-hover:text-teal-600 transition-colors line-clamp-1">
+              Sorein A3 Station</h3>
+            <p class="font-body-sm text-body-sm text-slate-500 mb-3">3197Wh Stackable / 3600W Surge</p>
+            <div class="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+
+              <a href="#"
+                class="inline-flex items-center justify-center px-3 py-2 rounded-xl bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-700 font-label-badge text-[11px] uppercase tracking-wider font-semibold transition-all">Read
+                more</a><button
+                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-teal-600 text-slate-700 hover:text-white flex items-center justify-center transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+          <!-- 10. Sorein G1000 Station -->
+          <div
+            class="group flex flex-col rounded-2xl bg-white shadow-sm hover:shadow-xl p-4 transition-all duration-300">
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-100 mb-4">
+              <span
+                class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-600 font-label-badge text-[10px] font-bold shadow-sm">SAVE
+                $250</span>
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Ruggedized mid-tier portable power station with rubber bumper corners, high-contrast dark grey chassis, and cyan ringed power button."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEXL15DLxPQi2Bp2KKmseCpquPSzDlU5i_63igCNUy3OcW6pZZ079_7p4CnucRpXNmzfldeNJwPqX-mnDHff3BBx_7YP_wgta6YJ8X7onSHpHQia5v778yusB5B3Ou6EHn37wiQToTTCV6xg_4UeYCzm9yk44QFQ73utehHDK4iW62u3Twzea0PBieRRs4jtn8B1v-XAytHp2XeUbe5cDrqsd-Y9vPa_zvDDj8WTYvJqICGCu714jH">
+            </div>
+            <div
+              class="flex items-center justify-between text-slate-500 font-label-caption text-[11px] uppercase tracking-wider mb-1">
+              <span class="">G-SERIES MID</span>
+              <span class="text-emerald-600 flex items-center gap-1 font-semibold"><span
+                  class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>In Stock</span>
+            </div>
+            <h3
+              class="font-headline-sm text-[16px] text-slate-900 font-bold group-hover:text-teal-600 transition-colors line-clamp-1">
+              Sorein G1000 Station</h3>
+            <p class="font-body-sm text-body-sm text-slate-500 mb-3">1000W Output / 999Wh Reserve</p>
+            <div class="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+
+              <a href="#"
+                class="inline-flex items-center justify-center px-3 py-2 rounded-xl bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-700 font-label-badge text-[11px] uppercase tracking-wider font-semibold transition-all">Read
+                more</a><button
+                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-teal-600 text-slate-700 hover:text-white flex items-center justify-center transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+          <!-- 11. Sorein G2000 Pro -->
+          <div
+            class="group flex flex-col rounded-2xl bg-white shadow-sm hover:shadow-xl p-4 transition-all duration-300">
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-100 mb-4">
+              <span
+                class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-600 font-label-badge text-[10px] font-bold shadow-sm">SAVE
+                $450</span>
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="High output industrial emergency backup power station with 4 AC outlets, LCD real-time circuit load meter, and military grade alloy frame in dark tech studio."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3McH1YwEB9LHM6XRwOh1IXcKMNqG9ML8Go6aw9B_09a1-RHd-Q7ZZWPIehVyHuuzPIX9AEQ1udJqLBebrayDKjB_KJscLpybB-fhwlZEpicx12nD89uZROunRItkXOKWi6LeHcuO_G-m8nhcBNergI8exHi-OaFV1rKedFfza9wFQGzYuQP3CLowwX-hHF1mOQVGnVCP1xmkFwoaGSsbcR3XaLWoivN6YnEvf6FcYT5IvjL996o6r">
+            </div>
+            <div
+              class="flex items-center justify-between text-slate-500 font-label-caption text-[11px] uppercase tracking-wider mb-1">
+              <span class="">G-SERIES HEAVY</span>
+              <span class="text-emerald-600 flex items-center gap-1 font-semibold"><span
+                  class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>In Stock</span>
+            </div>
+            <h3
+              class="font-headline-sm text-[16px] text-slate-900 font-bold group-hover:text-teal-600 transition-colors line-clamp-1">
+              Sorein G2000 Pro</h3>
+            <p class="font-body-sm text-body-sm text-slate-500 mb-3">2000W Sustained / 1536Wh LFP</p>
+            <div class="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+
+              <a href="#"
+                class="inline-flex items-center justify-center px-3 py-2 rounded-xl bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-700 font-label-badge text-[11px] uppercase tracking-wider font-semibold transition-all">Read
+                more</a><button
+                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-teal-600 text-slate-700 hover:text-white flex items-center justify-center transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+          <!-- 12. Sorein P300 Mini -->
+          <div
+            class="group flex flex-col rounded-2xl bg-white shadow-sm hover:shadow-xl p-4 transition-all duration-300">
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-100 mb-4">
+              <span
+                class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-600 font-label-badge text-[10px] font-bold shadow-sm">SAVE
+                $100</span>
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Lightweight handheld mini power generator cube with leather-textured carrying handle, USB-C high speed ports, and soft cyan perimeter led lights."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzIyRGR_kBMmm9bEX5-Nk6HTeBo-ODmm9gLmixfGn9V4AK_qXqnn66XLzA43oGV6-kxWLIC3rYnfRolEz-QJTOKPLQ3NkfEybSo36V7AWFGVeM6suHfoqEScOtaGXeCNG0haaVbMuNEU39Wx9GqOV1YOuD4pjymzYd-zUAmFF-GCCmVQ3qK7E_xWFmkmFxghoGzg8o4n60GI9rYcaR3JNbAU1i37GlIbdSPZr6_bYXKtdChgQtn3H">
+            </div>
+            <div
+              class="flex items-center justify-between text-slate-500 font-label-caption text-[11px] uppercase tracking-wider mb-1">
+              <span class="">P-SERIES MINI</span>
+              <span class="text-emerald-600 flex items-center gap-1 font-semibold"><span
+                  class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>In Stock</span>
+            </div>
+            <h3
+              class="font-headline-sm text-[16px] text-slate-900 font-bold group-hover:text-teal-600 transition-colors line-clamp-1">
+              Sorein P300 Mini</h3>
+            <p class="font-body-sm text-body-sm text-slate-500 mb-3">Pocket 300W / 288Wh UltraLight</p>
+            <div class="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+
+              <a href="#"
+                class="inline-flex items-center justify-center px-3 py-2 rounded-xl bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-700 font-label-badge text-[11px] uppercase tracking-wider font-semibold transition-all">Read
+                more</a><button
+                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-teal-600 text-slate-700 hover:text-white flex items-center justify-center transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+          <!-- ================= ROW 4 ================= -->
+          <!-- 13. 100W Solar Blanket -->
+          <div
+            class="group flex flex-col rounded-2xl bg-white shadow-sm hover:shadow-xl p-4 transition-all duration-300">
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-100 mb-4">
+              <span
+                class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-600 font-label-badge text-[10px] font-bold shadow-sm">SAVE
+                $80</span>
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Lightweight flexible solar blanket laid out on a dark tactical surface with carabiner grommets and reinforced ripstop backing."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXC95a9Z-PoeRwWBLHq-KG9VRRYMhRaAjGSGrJ6IiJZo9JBKh2QYdCN7HFoXzRLskI9xWINTTlymhhEbR_VQnngOYwqKPOR5mFgK3NOPrHaSRdS71VyK9GgsWu7sD_f3UEO8ViLHlbiDIrLH47m6m5Yvi2IMv56fer2F-jDYuZk4MVaNOX9sYNqkUWU5e16DxVGO_PsNoim4vR5RKLL2owSmixpoj4qPs9716OcGnFe1_b092ag87N">
+            </div>
+            <div
+              class="flex items-center justify-between text-slate-500 font-label-caption text-[11px] uppercase tracking-wider mb-1">
+              <span class="">PORTABLE BLANKET</span>
+              <span class="text-emerald-600 flex items-center gap-1 font-semibold"><span
+                  class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>In Stock</span>
+            </div>
+            <h3
+              class="font-headline-sm text-[16px] text-slate-900 font-bold group-hover:text-teal-600 transition-colors line-clamp-1">
+              100W Solar Blanket</h3>
+            <p class="font-body-sm text-body-sm text-slate-500 mb-3">Backpack Friendly / Fold &amp; Go</p>
+            <div class="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+
+              <a href="#"
+                class="inline-flex items-center justify-center px-3 py-2 rounded-xl bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-700 font-label-badge text-[11px] uppercase tracking-wider font-semibold transition-all">Read
+                more</a><button
+                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-teal-600 text-slate-700 hover:text-white flex items-center justify-center transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+          <!-- 14. Smart Switch Panel -->
+          <div
+            class="group flex flex-col rounded-2xl bg-white shadow-sm hover:shadow-xl p-4 transition-all duration-300">
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-100 mb-4">
+              <span
+                class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-600 font-label-badge text-[10px] font-bold shadow-sm">SAVE
+                $100</span>
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Wall-mounted smart sub-panel with DIN rail breakers, cyan indicator circuits, and glass touch interface for off-grid home power transfer."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTq9DOCkN6KxEjgnkXYSoLJheqozYV3CzlKIWImFvtOtCn6MAV0hVpI7njtgRoTjC5gRQWkKz1PTYIZAZ9eB9AubUPABaGMvNvdOFVoojoeXJFo6K8kSj869e7A-oNUKjEFff77Y3jke9bE7EvG_SqLu4jc014jTILLkOHRMU7bDSW73xoSnqQQn68DqfdSmZZ-pfL4FUJRbTToVLsttqtrpN5EvjhhKlfdJvNwBNo5jn9MdNT5vBN">
+            </div>
+            <div
+              class="flex items-center justify-between text-slate-500 font-label-caption text-[11px] uppercase tracking-wider mb-1">
+              <span class="">HOME INTEGRATION</span>
+              <span class="text-emerald-600 flex items-center gap-1 font-semibold"><span
+                  class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>In Stock</span>
+            </div>
+            <h3
+              class="font-headline-sm text-[16px] text-slate-900 font-bold group-hover:text-teal-600 transition-colors line-clamp-1">
+              Smart Switch Panel</h3>
+            <p class="font-body-sm text-body-sm text-slate-500 mb-3">Automatic 20ms Emergency Transfer</p>
+            <div class="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+
+              <a href="#"
+                class="inline-flex items-center justify-center px-3 py-2 rounded-xl bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-700 font-label-badge text-[11px] uppercase tracking-wider font-semibold transition-all">Read
+                more</a><button
+                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-teal-600 text-slate-700 hover:text-white flex items-center justify-center transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+          <!-- 15. Solar Cable 10m -->
+          <div
+            class="group flex flex-col rounded-2xl bg-white shadow-sm hover:shadow-xl p-4 transition-all duration-300">
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-100 mb-4">
+              <span
+                class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-600 font-label-badge text-[10px] font-bold shadow-sm">SAVE
+                $20</span>
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Heavy gauge industrial MC4 solar extension cable coil with gold-plated pins and IP68 waterproof quick connect couplings coiled on slate floor."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-fHkcPEpRUBqZ0wyt9TojpWnJ4UuR6GUcHZ70aoRmAUDbTBFUZZHpeURHtjq7eeA-T4qNDs9QmIcQPBhRh2J6Qh-Mo64a2gmgmi5M3CJu95qcvIE7Pvz5-AoFa3BZMm4Y5j12a-J-wzj2-G4qnevmm59r_IkYP4RuJixhXtVRQTC77WTb_WtCxU4x-ygC_eodBsp3NDyx3c-WHM5REYJ09T5Ucnb5CFVzk6STCsaXPXYv-N8sNlzf">
+            </div>
+            <div
+              class="flex items-center justify-between text-slate-500 font-label-caption text-[11px] uppercase tracking-wider mb-1">
+              <span class="">CONNECTIVITY</span>
+              <span class="text-emerald-600 flex items-center gap-1 font-semibold"><span
+                  class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>In Stock</span>
+            </div>
+            <h3
+              class="font-headline-sm text-[16px] text-slate-900 font-bold group-hover:text-teal-600 transition-colors line-clamp-1">
+              Solar Cable 10m</h3>
+            <p class="font-body-sm text-body-sm text-slate-500 mb-3">Weatherproof MC4 High-Amp Link</p>
+            <div class="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+
+              <a href="#"
+                class="inline-flex items-center justify-center px-3 py-2 rounded-xl bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-700 font-label-badge text-[11px] uppercase tracking-wider font-semibold transition-all">Read
+                more</a><button
+                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-teal-600 text-slate-700 hover:text-white flex items-center justify-center transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+          <!-- 16. Fast-Charger 1200W -->
+          <div
+            class="group flex flex-col rounded-2xl bg-white shadow-sm hover:shadow-xl p-4 transition-all duration-300">
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-100 mb-4">
+              <span
+                class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-600 font-label-badge text-[10px] font-bold shadow-sm">SAVE
+                $60</span>
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="GaN high output rapid wall charging block with aluminum heat dissipation fins and active smart thermal fan vent."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2WF1hYeA8VBQ87Z9LUBnsO--7gKxf9J9CfXOEjiIVi4cI5BmkdkPLmMVjZ6qD5YbWyPgUCxAAjDR6M_T-hiYIBW-XdSD_QmvFXB0knIHgStFiMxcdxllEJ3QhnEacWM0w9ztq6TZLmGli9D5s9HubSy0qAx598LqzoSgd556cZLqZUaWX0p3P16zNP9ak5D6IL3hPT80CWhabl3WeCqHz1eGy68Eqeo75pLc23wHmmpGOrit5d0ks">
+            </div>
+            <div
+              class="flex items-center justify-between text-slate-500 font-label-caption text-[11px] uppercase tracking-wider mb-1">
+              <span class="">FAST POWER</span>
+              <span class="text-emerald-600 flex items-center gap-1 font-semibold"><span
+                  class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>In Stock</span>
+            </div>
+            <h3
+              class="font-headline-sm text-[16px] text-slate-900 font-bold group-hover:text-teal-600 transition-colors line-clamp-1">
+              Fast-Charger 1200W</h3>
+            <p class="font-body-sm text-body-sm text-slate-500 mb-3">Dual Wall Plug GaN Core Adapter</p>
+            <div class="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+
+              <a href="#"
+                class="inline-flex items-center justify-center px-3 py-2 rounded-xl bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-700 font-label-badge text-[11px] uppercase tracking-wider font-semibold transition-all">Read
+                more</a><button
+                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-teal-600 text-slate-700 hover:text-white flex items-center justify-center transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+          <!-- ================= ROW 5 ================= -->
+          <!-- 17. Home Panel Gateway -->
+
+          <!-- 18. A-Series Link Cable -->
+
+          <!-- 19. All-Weather Heavy Cover -->
+
+          <!-- 20. 800W Roof Panel Duo -->
+
+        </div>
+      </section>
+      <!-- ECOSYSTEM SHOWCASE SPLIT SECTION -->
+      <section class="w-full bg-[#f8fafc] py-space-2xl px-gutter" id="ecosystem-breakdown">
+        <div class="max-w-7xl mx-auto grid grid-cols-12 gap-gutter items-center">
+          <!-- Visual Interactive Staging Column -->
+          <div class="col-span-12 lg:col-span-6 order-2 lg:order-1 relative">
+            <div class="relative w-full aspect-video rounded-3xl bg-slate-900 overflow-hidden p-2 shadow-2xl">
+              <img class="w-full h-full object-cover rounded-2xl"
+                data-alt="Exploded architectural diagram showing 15 Sorein modular battery blocks locking seamlessly on top of each other with neon cyan energy conduits tracing the connection bus inside a modern garage setting."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEvPs-Ksem2hrwhZ6GU5hGkSiySeyX7vH0kNzmXDLBJ4E1QUeULX0dD1nFptpwugtLQZPc8qiPMb5IeGf9Wo3zOQkGfLLzLx7J43q1ZjgVxhlR73OwDtRMBWNzodcbnaI5xT7635aSwQVbybtP69cFQX-Ap4P9ZrYDrWS1OFsVrSs7m5pD671cFTRI1LC1PwS7TJ1RkCoZLCsYMkvLxYnPHZ3Xk9pYXyJxaoxZ72tTUCdDDGhnKNoT">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              <!-- Live Telemetry Pill Overlay -->
+              <div
+                class="absolute bottom-5 left-5 right-5 flex items-center justify-between p-3.5 rounded-2xl bg-white/95 backdrop-blur-md shadow-lg text-slate-900">
+                <div class="flex items-center gap-space-sm">
+                  <span class="w-3 h-3 rounded-full bg-teal-500 animate-ping"></span>
+                  <div>
+                    <div class="font-headline-sm text-body-sm font-bold text-slate-900">STACK EXPANSION ACTIVE</div>
+                    <div class="font-label-caption text-label-caption text-slate-500">15 NODES DETECTED // SYSTEM
+                      HARMONIZED</div>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <div class="font-headline-sm text-body-md text-teal-700 font-bold">55,200 Wh</div>
+                  <div class="font-label-caption text-label-caption text-emerald-600 font-semibold">100% BALANCED</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Specs & Technical Explanations -->
+          <div class="col-span-12 lg:col-span-6 order-1 lg:order-2 flex flex-col">
+            <div
+              class="inline-flex items-center gap-space-xs text-teal-700 font-label-badge text-label-badge uppercase tracking-widest font-bold mb-space-xs">
+              <span class="material-symbols-outlined text-[16px]">device_hub</span>
+              Modular Topology
+            </div>
+            <h2 class="font-headline-lg text-headline-lg font-bold text-slate-900 uppercase tracking-tight mb-space-sm">
+              Expand to 55.2kWh <br>
+              <span class="text-teal-600">Boost power to 18kW</span>
+            </h2>
+            <p class="font-body-lg text-body-lg text-slate-600 mb-space-lg leading-relaxed">
+              Connect up to 15 expansion batteries effortlessly. Run whole-house circuits, heavy off-grid workshops, or
+              emergency medical facilities uninterrupted.
+            </p>
+            <!-- Feature Points -->
+            <div class="flex flex-col gap-space-md">
+              <div
+                class="p-space-md rounded-2xl bg-white shadow-sm hover:shadow-md flex items-start gap-space-md transition-shadow">
+                <div
+                  class="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center text-teal-600 shrink-0 mt-0.5">
+                  <span class="material-symbols-outlined text-[22px]">cable</span>
+                </div>
+                <div>
+                  <h4 class="font-headline-sm text-title-md font-bold text-slate-900 mb-1">Truly Modular Architecture
+                  </h4>
+                  <p class="font-body-sm text-body-sm text-slate-600">
+                    Plug-and-play connection. Zero cables between modules. Simply stack, lock, and power boots
+                    immediately through patented dual bus-bars.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="p-space-md rounded-2xl bg-white shadow-sm hover:shadow-md flex items-start gap-space-md transition-shadow">
+                <div
+                  class="w-10 h-10 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 shrink-0 mt-0.5">
+                  <span class="material-symbols-outlined text-[22px]">flash_on</span>
+                </div>
+                <div>
+                  <h4 class="font-headline-sm text-title-md font-bold text-slate-900 mb-1">Ultra-Fast Hybrid Inflow</h4>
+                  <p class="font-body-sm text-body-sm text-slate-600">
+                    Dual-port AC+Solar integration combined with solar input provides lightning recharge times without
+                    thermal throttling or cell degradation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- EXPLORE OUR PRODUCT LINES (3 COLUMNS) -->
+      <section class="w-full py-space-2xl px-gutter max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-space-xl">
+          <div class="font-label-badge text-label-badge text-teal-600 uppercase tracking-widest font-bold mb-space-xs">
+            PRECISION HARDWARE FAMILIES
+          </div>
+          <h2 class="font-headline-lg text-headline-lg font-bold text-slate-900 uppercase tracking-tight">
+            Explore Our Product Lines
+          </h2>
+          <p class="font-body-md text-body-md text-slate-600 mt-2">
+            Engineered for distinct endurance tiers. Choose your power form-factor.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+          <!-- Card 1: P Series -->
+          <div
+            class="group flex flex-col rounded-3xl bg-slate-50 hover:bg-white shadow-sm hover:shadow-xl p-6 transition-all duration-300">
+            <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-slate-200 mb-5">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Compact portable Sorein P Series generator placed on the tailgate of an overland truck in the wilderness at dusk with warm camping lantern glow."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBObGw6hi5HizY0BLe99snF4i3ZEDxJHzaMY50e32RqzJBCd9H8oREcEHXs_NEWqk7RwIJn29pIqyU5X-EHUKfAItkGE0nv-BwCiM7sIZRV6MaVtgPPqtu9qdoai4WhL6ZiCVDsAZdsed3GnBpyT0QkKJeewuojWhbw4GllA7Obp02biVrwm2Mp5a8ZQnhHLweC70d6YWRugqUg_hzmSjPylPgBH5ChqdNHRQbmMHS-m0WRsiFbTvvD">
+              <div
+                class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md shadow-sm font-label-badge text-[10px] text-slate-800 font-bold">
+                ULTRA-LIGHTWEIGHT
+              </div>
+            </div>
+            <div class="font-label-badge text-label-badge text-teal-600 tracking-wider uppercase mb-1 font-bold">
+              PORTABLE CAMPER</div>
+            <h3 class="font-headline-md text-headline-md text-slate-900 font-bold mb-2">Sorein P Series</h3>
+            <p class="font-body-md text-body-md text-slate-600 mb-4">
+              Compact, ultra-portable power solutions rated from 300W to 600W. Engineered for weekend camping, remote
+              photography, and emergency mobility.
+            </p>
+            <ul class="flex flex-col gap-2 font-body-sm text-body-sm text-slate-700 mb-6 mt-auto">
+              <li class="flex items-center gap-2"><span
+                  class="material-symbols-outlined text-teal-600 text-[16px]">check_circle</span> 300W – 600W Pure Sine
+                Output</li>
+              <li class="flex items-center gap-2"><span
+                  class="material-symbols-outlined text-teal-600 text-[16px]">check_circle</span> Under 12 lbs
+                Grab-and-Go</li>
+              <li class="flex items-center gap-2"><span
+                  class="material-symbols-outlined text-teal-600 text-[16px]">check_circle</span> Built-in Ambient Light
+                Bar</li>
+            </ul>
+            <a class="w-full py-3.5 rounded-xl bg-slate-200 hover:bg-teal-600 text-slate-800 hover:text-white font-headline-sm text-[13px] uppercase tracking-wider font-bold text-center transition-all shadow-sm"
+              href="#store-deployment">
+              EXPLORE P SERIES
+            </a>
+          </div>
+          <!-- Card 2: A Series -->
+          <div
+            class="group flex flex-col rounded-3xl bg-white shadow-md hover:shadow-2xl p-6 transition-all duration-300 relative">
+            <div
+              class="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-teal-600 text-white font-label-badge text-[10px] uppercase font-bold tracking-widest shadow-md">
+              MOST SCALABLE
+            </div>
+            <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-slate-200 mb-5">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Massive modular stack of Sorein A Series batteries powering a smart modern workshop with illuminated tools and digital monitors in the background."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfGx1r-rWWzFjr-A7uHycDq_bDYZ6XtcpVh_KOn9DryvQAJHjXF6jjwktXDUNlzKirEfnT6S_8_cttawHtzZXYSSkpIsDsR-YuTEmlef56AS_PW9MSklbWA4saoD-mcXjmqoAztCfArvO5rgRylbQ1BGXG4LoGOJqKpXz5g6ylNdJkkMp7NPW0VyQOsEig6rXO7hP0tUlrGxHAgmPwZRcvPWDNgOOlSpLGyhimNnUuEl_-rkqnSZ7m">
+              <div
+                class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md shadow-sm font-label-badge text-[10px] text-slate-800 font-bold">
+                MODULAR EXPANSION
+              </div>
+            </div>
+            <div class="font-label-badge text-label-badge text-teal-600 tracking-wider uppercase mb-1 font-bold">
+              ENTERPRISE &amp; RESIDENTIAL</div>
+            <h3 class="font-headline-md text-headline-md text-slate-900 font-bold mb-2">Sorein A Series</h3>
+            <p class="font-body-md text-body-md text-slate-600 mb-4">
+              Uncompromised stackable energy systems capable of 2200W to 18000W output. Seamless home backup and
+              off-grid command center deployment.
+            </p>
+            <ul class="flex flex-col gap-2 font-body-sm text-body-sm text-slate-700 mb-6 mt-auto">
+              <li class="flex items-center gap-2"><span
+                  class="material-symbols-outlined text-teal-600 text-[16px]">check_circle</span> 2200W – 18kW Surge
+                Scalability</li>
+              <li class="flex items-center gap-2"><span
+                  class="material-symbols-outlined text-teal-600 text-[16px]">check_circle</span> Hot-Swappable 15-Block
+                Bus</li>
+              <li class="flex items-center gap-2"><span
+                  class="material-symbols-outlined text-teal-600 text-[16px]">check_circle</span> Sub-20ms EPS Home
+                Switch</li>
+            </ul>
+            <a class="w-full py-3.5 rounded-xl bg-teal-600 text-white font-headline-sm text-[13px] uppercase tracking-wider font-bold text-center hover:bg-teal-700 shadow-md shadow-teal-600/20 transition-all"
+              href="#store-deployment">
+              CONFIGURE A SERIES
+            </a>
+          </div>
+          <!-- Card 3: Solar Panels -->
+          <div
+            class="group flex flex-col rounded-3xl bg-slate-50 hover:bg-white shadow-sm hover:shadow-xl p-6 transition-all duration-300">
+            <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-slate-200 mb-5">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Field of bifacial Sorein solar panels oriented toward direct sunlight in desert terrain with matte obsidian backings and high tech cable harnesses."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxJU6JEYZxEYLfvvNwF-gM9yJXqsqcLVurtVPCAQDYjIIfJ6mm0A4-cj5DBL5P70xpNlSaB898tYYOTXYFx6KJEyipUBhtxfLSlG2S4fn_DF-xKNgVnrh_I0a0epvkkzZYJ6WobuYvOI2y5MdAqkwcldJmTetzGrRV9whR6_yl5dvtiinQpDlTt5ii75lP46zqs4MzThBrRuEPAluZMaMycex_CAOHhg0E_Gy5DT3s-TCYSH-17lQc">
+              <div
+                class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md shadow-sm font-label-badge text-[10px] text-slate-800 font-bold">
+                BIFACIAL HARVEST
+              </div>
+            </div>
+            <div class="font-label-badge text-label-badge text-teal-600 tracking-wider uppercase mb-1 font-bold">SOLAR
+              GENERATION</div>
+            <h3 class="font-headline-md text-headline-md text-slate-900 font-bold mb-2">Solar Arrays</h3>
+            <p class="font-body-md text-body-md text-slate-600 mb-4">
+              Bifacial Monocrystalline ETFE portable blankets and rigid rooftop modules from 100W up to 800W.
+              Industry-leading 23.4% conversion efficiency.
+            </p>
+            <ul class="flex flex-col gap-2 font-body-sm text-body-sm text-slate-700 mb-6 mt-auto">
+              <li class="flex items-center gap-2"><span
+                  class="material-symbols-outlined text-teal-600 text-[16px]">check_circle</span> 23.4% Monocrystalline
+                Yield</li>
+              <li class="flex items-center gap-2"><span
+                  class="material-symbols-outlined text-teal-600 text-[16px]">check_circle</span> ETFE Anti-Scratch
+                &amp; IP68</li>
+              <li class="flex items-center gap-2"><span
+                  class="material-symbols-outlined text-teal-600 text-[16px]">check_circle</span> MC4 Universal
+                Connectivity</li>
+            </ul>
+            <a class="w-full py-3.5 rounded-xl bg-slate-200 hover:bg-teal-600 text-slate-800 hover:text-white font-headline-sm text-[13px] uppercase tracking-wider font-bold text-center transition-all shadow-sm"
+              href="#store-deployment">
+              EXPLORE SOLAR ARRAYS
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- CONTACT US SECTION (DESKTOP PRECISION CARD) -->
+      <section class="w-full bg-[#f8fafc] py-space-2xl px-gutter">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-space-xl">
+            <div
+              class="font-label-badge text-label-badge text-teal-600 uppercase tracking-widest font-bold mb-space-xs">
+              DIRECT ENGINEERING INQUIRY
+            </div>
+            <h2 class="font-headline-lg text-headline-lg font-bold text-slate-900 uppercase tracking-tight">
+              Connect With Energy Architects
+            </h2>
+            <p class="font-body-md text-body-md text-slate-600 mt-2">
+              Request custom fleet quotes, solar field blueprints, or enterprise distribution allocations.
+            </p>
+          </div>
+          <!-- High Tech Form Surface Container (Clean Light Mode, No Harsh Border) -->
+          <div class="p-8 md:p-10 rounded-3xl bg-white shadow-xl relative overflow-hidden">
+            <form class="relative z-10 flex flex-col gap-space-lg"
+              onsubmit="event.preventDefault(); alert('Inquiry transmission complete. An energy architect will dispatch within 2 business hours.');">
+              <!-- Row 1: Company Name -->
+              <div>
+                <label
+                  class="block font-label-badge text-label-badge uppercase tracking-wider text-slate-700 mb-2">Company /
+                  Organization</label>
+                <div
+                  class="flex items-center bg-slate-50 rounded-xl px-4 py-3 focus-within:bg-white focus-within:ring-2 focus-within:ring-teal-600/30 transition-all">
+                  <span class="material-symbols-outlined text-slate-400 text-[18px] mr-2">corporate_fare</span>
+                  <input
+                    class="w-full bg-transparent font-body-sm text-body-sm text-slate-800 placeholder:text-slate-400 focus:outline-none"
+                    placeholder="e.g. Atlas Dynamics Off-Grid Labs" type="text">
+                </div>
+              </div>
+              <!-- Row 2: First Name & Last Name -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+                <div>
+                  <label
+                    class="block font-label-badge text-label-badge uppercase tracking-wider text-slate-700 mb-2">First
+                    Name *</label>
+                  <div
+                    class="flex items-center bg-slate-50 rounded-xl px-4 py-3 focus-within:bg-white focus-within:ring-2 focus-within:ring-teal-600/30 transition-all">
+                    <input
+                      class="w-full bg-transparent font-body-sm text-body-sm text-slate-800 placeholder:text-slate-400 focus:outline-none"
+                      placeholder="Alex" required="" type="text">
+                  </div>
+                </div>
+                <div>
+                  <label
+                    class="block font-label-badge text-label-badge uppercase tracking-wider text-slate-700 mb-2">Last
+                    Name *</label>
+                  <div
+                    class="flex items-center bg-slate-50 rounded-xl px-4 py-3 focus-within:bg-white focus-within:ring-2 focus-within:ring-teal-600/30 transition-all">
+                    <input
+                      class="w-full bg-transparent font-body-sm text-body-sm text-slate-800 placeholder:text-slate-400 focus:outline-none"
+                      placeholder="Vance" required="" type="text">
+                  </div>
+                </div>
+              </div>
+              <!-- Row 3: Email & Phone with Country Selector -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+                <div>
+                  <label
+                    class="block font-label-badge text-label-badge uppercase tracking-wider text-slate-700 mb-2">Email
+                    Address *</label>
+                  <div
+                    class="flex items-center bg-slate-50 rounded-xl px-4 py-3 focus-within:bg-white focus-within:ring-2 focus-within:ring-teal-600/30 transition-all">
+                    <span class="material-symbols-outlined text-slate-400 text-[18px] mr-2">mail</span>
+                    <input
+                      class="w-full bg-transparent font-body-sm text-body-sm text-slate-800 placeholder:text-slate-400 focus:outline-none"
+                      placeholder="alex@domain.com" required="" type="email">
+                  </div>
+                </div>
+                <div>
+                  <label
+                    class="block font-label-badge text-label-badge uppercase tracking-wider text-slate-700 mb-2">Phone
+                    Number *</label>
+                  <div
+                    class="flex items-center bg-slate-50 rounded-xl overflow-hidden focus-within:bg-white focus-within:ring-2 focus-within:ring-teal-600/30 transition-all">
+                    <!-- Country Code Selector -->
+                    <select
+                      class="bg-slate-100 text-slate-700 font-body-sm text-body-sm px-3 py-3 border-0 focus:outline-none cursor-pointer">
+                      <option value="+1">US (+1)</option>
+                      <option value="+44">UK (+44)</option>
+                      <option value="+49">DE (+49)</option>
+                      <option value="+61">AU (+61)</option>
+                      <option value="+81">JP (+81)</option>
+                    </select>
+                    <input
+                      class="w-full bg-transparent font-body-sm text-body-sm text-slate-800 placeholder:text-slate-400 px-3.5 focus:outline-none"
+                      placeholder="(555) 019-2834" required="" type="tel">
+                  </div>
+                </div>
+              </div>
+              <!-- Actions -->
+              <div class="pt-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-md">
+                <a class="font-body-sm text-body-sm text-slate-500 hover:text-teal-600 flex items-center gap-1 transition-colors"
+                  href="#store-deployment">
+                  <span class="material-symbols-outlined text-[16px]">arrow_back</span>
+                  Continue with standard shop catalog
+                </a>
+                <button
+                  class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-teal-600 text-white font-headline-sm text-[14px] uppercase font-bold tracking-wider hover:bg-teal-700 shadow-md shadow-teal-600/20 transition-all"
+                  type="submit">
+                  SUBMIT INQUIRY
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="w-full bg-slate-100 text-slate-600">
+    <div class="w-full bg-slate-50 py-space-lg">
+      <div class="max-w-7xl mx-auto px-gutter grid grid-cols-2 lg:grid-cols-4 gap-gutter">
+        <div class="flex items-center gap-space-md">
+          <div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-teal-600 shadow-sm"><span
+              class="material-symbols-outlined text-[26px]">verified</span></div>
+          <div>
+            <h4 class="font-headline-sm text-headline-sm text-slate-900">5-Year Warranty</h4>
+            <p class="font-body-sm text-body-sm text-slate-500">Solid-state LFP grade coverage</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-space-md">
+          <div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-emerald-600 shadow-sm"><span
+              class="material-symbols-outlined text-[26px]">local_shipping</span></div>
+          <div>
+            <h4 class="font-headline-sm text-headline-sm text-slate-900">Insured Global Delivery</h4>
+            <p class="font-body-sm text-body-sm text-slate-500">Reinforced battery logistics</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-space-md">
+          <div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-teal-600 shadow-sm"><span
+              class="material-symbols-outlined text-[26px]">security</span></div>
+          <div>
+            <h4 class="font-headline-sm text-headline-sm text-slate-900">256-Bit Escrow</h4>
+            <p class="font-body-sm text-body-sm text-slate-500">Encrypted checkout security</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-space-md">
+          <div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-emerald-600 shadow-sm"><span
+              class="material-symbols-outlined text-[26px]">terrain</span></div>
+          <div>
+            <h4 class="font-headline-sm text-headline-sm text-slate-900">30-Day Field Test</h4>
+            <p class="font-body-sm text-body-sm text-slate-500">Zero-risk rugged performance trial</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-gutter py-space-2xl grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+      <div class="lg:col-span-4 flex flex-col gap-space-md">
+        <div class="flex items-center gap-space-sm">
+          <div class="flex items-center justify-center w-8 h-8 rounded-xl bg-teal-50 text-teal-600"><span
+              class="material-symbols-outlined text-[20px]">electric_bolt</span></div><span
+            class="font-headline-sm text-headline-sm tracking-tight text-slate-900 uppercase">Sorein<span
+              class="text-teal-600">Power</span></span>
+        </div>
+        <p class="font-body-md text-body-md text-slate-500 max-w-sm">High-performance modular energy storage
+          architecture and bifacial solar arrays engineered for continuous off-grid autonomy and tactical emergency
+          resilience.</p>
+        <div class="flex items-center gap-space-sm pt-space-xs"><span
+            class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.6)]"></span><span
+            class="font-label-badge text-label-badge text-slate-700 uppercase">GLOBAL TELEMETRY: ACTIVE</span></div>
+      </div>
+      <div class="lg:col-span-5 grid grid-cols-3 gap-gutter">
+        <div class="flex flex-col gap-space-sm"><span
+            class="font-headline-sm text-[16px] text-slate-900 uppercase tracking-wider font-semibold">Hardware</span>
+          <ul class="flex flex-col gap-space-xs font-body-sm text-body-sm">
+            <li class="hover:text-teal-600 transition-colors"><a data-path="products-shop" href="#" class="">Power
+                Stations</a></li>
+            <li class="hover:text-teal-600 transition-colors"><a data-path="modular-ecosystem" href="#"
+                class="">Expansion Modules</a></li>
+            <li class="hover:text-teal-600 transition-colors"><a data-path="solar-panels" href="#" class="">Bifacial
+                Solar Panels</a></li>
+            <li class="hover:text-teal-600 transition-colors"><a data-path="products-shop" href="#" class="">Smart Home
+                Panels</a></li>
+            <li class="hover:text-teal-600 transition-colors"><a data-path="products-shop" href="#" class="">Micro
+                Inverters</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-space-sm"><span
+            class="font-headline-sm text-[16px] text-slate-900 uppercase tracking-wider font-semibold">Platform</span>
+          <ul class="flex flex-col gap-space-xs font-body-sm text-body-sm">
+            <li class="hover:text-teal-600 transition-colors"><a data-path="explore" href="#" class="">Ecosystem OS</a>
+            </li>
+            <li class="hover:text-teal-600 transition-colors"><a data-path="explore" href="#" class="">Energy Calc
+                Engine</a></li>
+            <li class="hover:text-teal-600 transition-colors"><a data-path="support" href="#" class="">Firmware Hub</a>
+            </li>
+            <li class="hover:text-teal-600 transition-colors"><a data-path="support" href="#" class="">Warranty
+                Registration</a></li>
+            <li class="hover:text-teal-600 transition-colors"><a data-path="support" href="#" class="">Safety
+                Compliance</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-space-sm"><span
+            class="font-headline-sm text-[16px] text-slate-900 uppercase tracking-wider font-semibold">Company</span>
+          <ul class="flex flex-col gap-space-xs font-body-sm text-body-sm">
+            <li class="hover:text-teal-600 transition-colors"><a data-path="explore" href="#" class="">About Sorein</a>
+            </li>
+            <li class="hover:text-teal-600 transition-colors"><a data-path="contact" href="#" class="">Industrial
+                Partners</a></li>
+            <li class="hover:text-teal-600 transition-colors"><a data-path="explore" href="#" class="">Field Case
+                Studies</a></li>
+            <li class="hover:text-teal-600 transition-colors"><a data-path="contact" href="#" class="">Press Media
+                Kit</a></li>
+            <li class="hover:text-teal-600 transition-colors"><a data-path="contact" href="#" class="">Contact
+                Support</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lg:col-span-3 flex flex-col gap-space-md"><span
+          class="font-headline-sm text-[16px] text-slate-900 uppercase tracking-wider font-semibold">Energy
+          Dispatch</span>
+        <p class="font-body-sm text-body-sm text-slate-500">Receive hardware release schedules, firmware patch notes,
+          and reserve allocation windows.</p>
+        <div class="flex flex-col gap-space-xs">
+          <div class="flex items-center bg-white rounded-xl px-space-sm py-1.5 shadow-sm transition-all"><input
+              class="w-full bg-transparent font-body-sm text-body-sm text-slate-800 placeholder:text-slate-400 focus:outline-none"
+              placeholder="engineer@domain.com" type="email"><button
+              class="flex items-center justify-center px-space-sm py-1 rounded-lg bg-teal-600 text-white font-headline-sm text-[12px] uppercase font-bold tracking-wider hover:bg-teal-700 transition-all shadow-sm">Join</button>
+          </div><span class="font-label-caption text-label-caption text-slate-400">Instant encrypted dispatch. Opt-out
+            at anytime.</span>
+        </div>
+      </div>
+    </div>
+    <div class="w-full bg-slate-200/60 py-space-md">
+      <div
+        class="max-w-7xl mx-auto px-gutter flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-caption text-label-caption text-slate-500">
+        <div class="">© 2025 SoreinPower Systems Inc. All precision rights reserved. Engineered for off-grid autonomy.
+        </div>
+        <div class="flex items-center gap-space-lg"><a class="hover:text-teal-600 transition-colors" data-path="support"
+            href="#">Privacy Policy</a><a class="hover:text-teal-600 transition-colors" data-path="support"
+            href="#">Terms of Hardware Service</a><a class="hover:text-teal-600 transition-colors" data-path="support"
+            href="#">FCC / CE Compliance</a><a class="hover:text-teal-600 transition-colors" data-path="support"
+            href="#">Battery Disposal Policy</a></div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
